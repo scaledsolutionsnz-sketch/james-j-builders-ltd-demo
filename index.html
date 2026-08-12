@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>James J Builders Ltd | Builders &amp; Carpentry, Nelson</title>
+<meta name="description" content="James J Builders Ltd — carpenter-led new builds, renovations and quality carpentry across Nelson and Tasman. Call James for a clear, no-obligation quote.">
+<meta property="og:title" content="James J Builders Ltd | Builders &amp; Carpentry, Nelson">
+<meta property="og:description" content="Carpenter-led new builds, renovations and quality carpentry across Nelson &amp; Tasman.">
+<meta property="og:image" content="https://james-j-builders-ltd-demo.vercel.app/img/about-real-build.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E1826'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23C19A5B' text-anchor='middle'%3EJJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1826;
+  --navy-soft:#162335;
+  --bone:#F4F0E8;
+  --white:#FFFFFF;
+  --ink:#1D2733;
+  --muted:#5B6674;
+  --accent:#C19A5B;
+  --accent-deep:#A57F41;
+  --hairline:rgba(255,255,255,.14);
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;font-weight:300;color:var(--ink);background:var(--white);line-height:1.65;font-size:16px;overflow-x:hidden}
+img{image-orientation:from-image;max-width:100%;display:block}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+a{color:inherit}
+.wrap{width:min(1160px,92%);margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);font-weight:500}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--accent)}
+.section{padding:5.5rem 0}
+.section-head{max-width:640px;margin-bottom:3rem}
+.section-head h2{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--navy);margin-top:.7rem}
+.badge-note{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid rgba(29,39,51,.18);border-radius:99px;padding:.28rem .8rem;margin-left:.8rem;vertical-align:middle}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:.9rem 1.9rem;border-radius:8px;font-family:'Outfit',sans-serif;font-weight:500;font-size:1rem;text-decoration:none;transition:transform .25s ease, box-shadow .25s ease, background .25s ease;cursor:pointer}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:var(--navy)}
+.btn-accent:hover{background:#D0AC71;transform:translateY(-2px);box-shadow:0 12px 28px rgba(193,154,91,.35)}
+.btn-ghost{border:1px solid var(--hairline);color:var(--white);background:rgba(255,255,255,.06);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--navy-soft);transform:translateY(-2px);box-shadow:0 12px 28px rgba(14,24,38,.3)}
+
+/* intro overlay */
+#intro{position:fixed;inset:0;background:var(--navy);z-index:200;display:flex;align-items:center;justify-content:center;transition:opacity .7s ease,visibility .7s ease}
+#intro .mark{text-align:center;opacity:0;transform:translateY(14px);animation:introIn .8s ease .15s forwards}
+#intro .mark .mono{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--accent);letter-spacing:.06em}
+#intro .mark .sub{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.4rem}
+#intro.done{opacity:0;visibility:hidden}
+@keyframes introIn{to{opacity:1;transform:none}}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s ease, box-shadow .35s ease}
+header.scrolled{background:rgba(14,24,38,.94);backdrop-filter:blur(10px);box-shadow:0 2px 24px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0;color:var(--white)}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;text-decoration:none;letter-spacing:.02em;display:flex;align-items:baseline;gap:.5rem}
+.brand em{font-style:normal;color:var(--accent)}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:.92rem;font-weight:400;opacity:.85;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav-call{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--hairline);border-radius:8px;padding:.55rem 1.1rem;text-decoration:none;font-size:.92rem;font-weight:500;background:rgba(255,255,255,.06);transition:background .25s}
+.nav-call:hover{background:rgba(255,255,255,.15)}
+.burger{display:none;background:none;border:none;color:var(--white);width:46px;height:46px;cursor:pointer;align-items:center;justify-content:center}
+.mobile-menu{display:none;background:rgba(14,24,38,.98);backdrop-filter:blur(12px);padding:.6rem 0 1.4rem}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;color:var(--white);text-decoration:none;padding:.85rem 0;font-size:1.05rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile-menu .m-call{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-top:1.1rem;background:var(--accent);color:var(--navy);border-radius:8px;padding:.95rem;font-weight:500;border-bottom:none}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--navy);color:var(--white);overflow:hidden}
+.hero-slides{position:absolute;inset:0}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
+.hero-slide.active{opacity:1}
+.hero-slide img{width:100%;height:100%;object-fit:cover}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,24,38,.72) 0%,rgba(14,24,38,.48) 45%,rgba(14,24,38,.82) 100%)}
+.hero-inner{position:relative;z-index:2;padding:8.5rem 0 5rem}
+.hero .eyebrow{color:var(--accent)}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.6rem);max-width:15ch;margin:.9rem 0 1.2rem;color:var(--white)}
+.hero p{max-width:46ch;font-size:1.1rem;color:rgba(255,255,255,.85)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.2rem}
+.hero-rating{display:inline-flex;align-items:center;gap:.8rem;margin-top:2.4rem;padding:.75rem 1.2rem;border:1px solid var(--hairline);border-radius:12px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);font-size:.95rem}
+.hero-rating .stars{color:var(--accent);letter-spacing:.15em;font-size:1rem}
+.hero-fade-up{opacity:0;transform:translateY(22px);animation:fadeUp .9s ease forwards}
+.d1{animation-delay:.55s}.d2{animation-delay:.7s}.d3{animation-delay:.85s}.d4{animation-delay:1s}.d5{animation-delay:1.15s}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+
+/* trust strip */
+.trust{background:var(--bone)}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding:2.6rem 0}
+.trust-item{display:flex;gap:1rem;align-items:flex-start}
+.trust-item svg{flex:none;color:var(--accent-deep);margin-top:.2rem}
+.trust-item h3{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:600;color:var(--navy)}
+.trust-item p{font-size:.92rem;color:var(--muted);margin-top:.2rem}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem}
+.svc-card{background:var(--white);border:1px solid rgba(29,39,51,.09);border-radius:var(--radius);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(14,24,38,.12)}
+.svc-card figure{aspect-ratio:16/9;overflow:hidden;margin:0}
+.svc-card figure img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05);transition:transform .6s ease}
+.svc-card:hover figure img{transform:scale(1.05)}
+.svc-body{padding:1.6rem 1.7rem 1.8rem}
+.svc-body h3{font-size:1.5rem;color:var(--navy)}
+.svc-body p{font-size:.95rem;color:var(--muted);margin-top:.5rem}
+
+/* about */
+.about{background:var(--bone)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-photo{position:relative}
+.about-photo img{border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;width:100%;filter:saturate(.85) contrast(1.05)}
+.photo-tag{position:absolute;left:0;bottom:0;background:var(--accent);color:var(--navy);font-size:.78rem;letter-spacing:.08em;font-weight:500;padding:.55rem 1.1rem;border-radius:0 var(--radius) 0 var(--radius)}
+.about-copy h2{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--navy);margin:.7rem 0 1.2rem}
+.about-copy p{color:var(--muted)}
+.about-copy p + p{margin-top:1rem}
+.checklist{list-style:none;margin-top:1.8rem;display:grid;gap:.9rem}
+.checklist li{display:flex;gap:.85rem;align-items:flex-start;font-weight:400;color:var(--ink)}
+.checklist svg{flex:none;color:var(--accent-deep);margin-top:.25rem}
+
+/* crew */
+.crew-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+.crew-card{background:var(--white);border:1px solid rgba(29,39,51,.09);border-radius:var(--radius);padding:2.2rem 1.8rem;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+.crew-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(14,24,38,.1)}
+.avatar{width:84px;height:84px;border-radius:50%;background:var(--navy);border:2px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.9rem;margin:0 auto 1.2rem}
+.crew-card h3{font-size:1.35rem;color:var(--navy)}
+.crew-card .role{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);font-weight:500;margin:.3rem 0 .8rem}
+.crew-card p{font-size:.92rem;color:var(--muted)}
+.crew-card .ex{display:inline-block;margin-top:1rem;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid rgba(29,39,51,.16);border-radius:99px;padding:.22rem .7rem}
+
+/* reviews */
+.reviews{background:var(--bone)}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+.review-card{background:var(--white);border:1px solid rgba(29,39,51,.09);border-radius:var(--radius);padding:1.9rem}
+.review-card .stars{color:var(--accent);letter-spacing:.18em;font-size:1.05rem}
+.review-card blockquote{margin:1rem 0 1.3rem;color:var(--ink);font-size:.98rem}
+.review-card .who{font-weight:500;color:var(--navy);font-size:.95rem}
+.review-card .when{font-size:.82rem;color:var(--muted)}
+.reviews-cta{margin-top:2.6rem}
+
+/* review banner */
+.review-banner{background:var(--navy);color:var(--white);padding:4.2rem 0}
+.review-banner .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.6rem}
+.review-banner h2{font-size:clamp(1.7rem,3.6vw,2.4rem)}
+.review-banner p{color:rgba(255,255,255,.75);margin-top:.4rem;max-width:48ch}
+
+/* contact */
+.contact{background:var(--navy);color:var(--white);border-top:1px solid var(--hairline)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.contact h2{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--white);margin-top:.7rem}
+.contact .lead{color:rgba(255,255,255,.75);margin-top:1rem;max-width:44ch}
+.info-rows{list-style:none;margin-top:2.2rem;display:grid;gap:1.15rem}
+.info-rows li{display:flex;gap:1rem;align-items:flex-start}
+.info-rows svg{flex:none;color:var(--accent);margin-top:.2rem}
+.info-rows a{color:var(--white);text-decoration:none}
+.info-rows a:hover{color:var(--accent)}
+.info-rows .lbl{display:block;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.socials{display:flex;gap:.9rem;margin-top:2.2rem}
+.socials a{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;border:1px solid var(--hairline);color:var(--white);transition:background .25s,color .25s,border-color .25s}
+.socials a:hover{background:var(--accent);color:var(--navy);border-color:var(--accent)}
+.contact-actions{display:flex;flex-direction:column;justify-content:center;gap:1.1rem}
+.contact-actions .btn{width:100%;min-height:62px;font-size:1.08rem}
+.contact-actions .hint{text-align:center;font-size:.85rem;color:rgba(255,255,255,.55)}
+
+/* map + footer */
+.map-band{background:var(--navy);padding:0 0 5rem}
+.map-band iframe{width:100%;height:420px;border:0;border-radius:var(--radius);display:block}
+footer{background:#0A121D;color:rgba(255,255,255,.7);padding:2.6rem 0}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem}
+.foot .brand{font-size:1.15rem;color:var(--white)}
+.foot-links{display:flex;gap:1.6rem;list-style:none;font-size:.88rem}
+.foot-links a{text-decoration:none;opacity:.8}
+.foot-links a:hover{opacity:1;color:var(--accent)}
+.foot .socials{margin-top:0}
+.foot .socials a{width:40px;height:40px}
+.foot-copy{font-size:.82rem;opacity:.6;margin-top:1.6rem;text-align:center;width:100%}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+@media (max-width: 900px){
+  .svc-grid,.crew-grid,.review-grid{grid-template-columns:1fr 1fr}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2.6rem}
+  .trust .wrap{grid-template-columns:1fr;gap:1.4rem}
+}
+@media (max-width: 640px){
+  .section{padding:3.8rem 0}
+  .nav-links{display:none}
+  .burger{display:flex}
+  .svc-grid,.crew-grid,.review-grid{grid-template-columns:1fr}
+  .hero-inner{padding:7.5rem 0 4rem}
+  .hero p{font-size:1rem}
+  .hero-ctas .btn{width:100%}
+  .review-banner .wrap{flex-direction:column;align-items:flex-start}
+  .review-banner .btn{width:100%}
+  .map-band iframe{height:320px}
+  .foot{flex-direction:column;text-align:center;justify-content:center}
+  .foot-links{flex-wrap:wrap;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<div id="intro" aria-hidden="true">
+  <div class="mark">
+    <div class="mono">James J Builders</div>
+    <div class="sub">Nelson &middot; Tasman</div>
+  </div>
+</div>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top">James J <em>Builders</em></a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#crew">Crew</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="nav-call" href="tel:+64224175468">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          022 417 5468</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="wrap">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#crew">Crew</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a class="m-call" href="tel:+64224175468">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 022 417 5468
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-slide active"><img src="img/hero-exterior.jpg" alt="Modern architectural home at dusk with dark timber cladding" fetchpriority="high" width="1800" height="1200"></div>
+      <div class="hero-slide"><img src="img/hero-framing.jpg" alt="Timber roof trusses of a new home under construction against a blue sky" loading="lazy" width="1800" height="1200"></div>
+      <div class="hero-slide"><img src="img/hero-sky-frame.jpg" alt="Timber wall framing and scaffolding on a residential build" loading="lazy" width="1800" height="1200"></div>
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow hero-fade-up d1">Nelson &amp; Tasman &middot; Builders &amp; Carpenters</span>
+      <h1 class="hero-fade-up d2">New builds and renovations, done properly.</h1>
+      <p class="hero-fade-up d3">James J Builders is a carpenter-led building company working across Nelson and Tasman — from full new homes to renovations, decks and quality carpentry.</p>
+      <div class="hero-ctas hero-fade-up d4">
+        <a class="btn btn-accent" href="tel:+64224175468">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 022 417 5468
+        </a>
+        <a class="btn btn-ghost" href="#contact">Get a quote</a>
+      </div>
+      <div class="hero-rating hero-fade-up d5">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span>4.9 from 30+ local clients</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-item reveal">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><h3>Nelson &amp; Tasman wide</h3><p>Based in Nelson, working across the whole Tasman region.</p></div>
+      </div>
+      <div class="trust-item reveal">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
+        <div><h3>Clear quotes up front</h3><p>You know the price and the plan before any work starts.</p></div>
+      </div>
+      <div class="trust-item reveal">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div><h3>Tidy sites, quality finish</h3><p>We turn up when we say, keep the site tidy and stand behind the work.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What we do</span>
+        <h2>Building work, from framing to final fix</h2>
+      </div>
+      <div class="svc-grid">
+        <article class="svc-card reveal">
+          <figure><img src="img/svc-newbuild.jpg" alt="Builder nailing timber wall framing on a new home" loading="lazy" width="1800" height="1200"></figure>
+          <div class="svc-body">
+            <h3>New home builds</h3>
+            <p>Full residential builds from the slab up — framing, cladding, fit-out and finish, managed from start to handover.</p>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <figure><img src="img/svc-reno.jpg" alt="Freshly renovated interior with new timber flooring" loading="lazy" width="1800" height="2700"></figure>
+          <div class="svc-body">
+            <h3>Renovations &amp; extensions</h3>
+            <p>Open up the living room, add a bedroom or take on the whole villa — renovations that respect the house you already have.</p>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <figure><img src="img/svc-deck.jpg" alt="New timber deck with shade sail on a family home" loading="lazy" width="1800" height="1198"></figure>
+          <div class="svc-body">
+            <h3>Decks, fences &amp; outdoor living</h3>
+            <p>Decks, pergolas and fences built to handle Nelson sun and southerlies — and to look good for years.</p>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <figure><img src="img/svc-carpentry.jpg" alt="Carpenter measuring timber with a tape measure on site" loading="lazy" width="1800" height="1200"></figure>
+          <div class="svc-body">
+            <h3>General carpentry &amp; repairs</h3>
+            <p>Doors, windows, weatherboards, small structural fixes — the jobs that need a proper carpenter, not a patch-up.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo reveal">
+        <img src="img/about-real-build.jpg" alt="A recently completed James J Builders home in Nelson with dark cladding" loading="lazy" width="960" height="720">
+        <span class="photo-tag">One of our recent builds</span>
+      </div>
+      <div class="about-copy reveal">
+        <span class="eyebrow">About us</span>
+        <h2>A Nelson building company that keeps its word</h2>
+        <p>James J Builders Ltd is a locally owned building and carpentry company based in Nelson. James and the team take on new builds, renovations and carpentry jobs across the Nelson–Tasman region, and treat every one the same way: clear communication, honest pricing and a finish we're happy to put our name on.</p>
+        <p>The photo alongside is one of ours — a recent new build in Nelson, from bare section to handover.</p>
+        <ul class="checklist">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Locally owned and operated in Nelson</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Clear, itemised quotes before work starts</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Workmanship we stand behind</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="crew">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Who you'll deal with</span>
+        <h2>Meet the crew</h2>
+      </div>
+      <div class="crew-grid">
+        <article class="crew-card reveal">
+          <div class="avatar">JJ</div>
+          <h3>James</h3>
+          <div class="role">Owner / Builder</div>
+          <p>Your first call and your last walkthrough. James quotes the job, runs the site and does the building.</p>
+        </article>
+        <article class="crew-card reveal">
+          <div class="avatar">SC</div>
+          <h3>Site Carpenter</h3>
+          <div class="role">Carpentry</div>
+          <p>On the tools alongside James — framing, cladding, decks and finishing carpentry.</p>
+          <span class="ex">Example role</span>
+        </article>
+        <article class="crew-card reveal">
+          <div class="avatar">AP</div>
+          <h3>Apprentice</h3>
+          <div class="role">Apprentice Builder</div>
+          <p>Learning the trade the right way: tidy sites, straight lines and no shortcuts.</p>
+          <span class="ex">Example role</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What clients say</span>
+        <h2>Word of mouth, in writing<span class="badge-note">Example reviews</span></h2>
+      </div>
+      <div class="review-grid">
+        <article class="review-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"James quoted our extension clearly, turned up when he said he would, and the finish is spot on. The site was left tidy every single day."</blockquote>
+          <div class="who">Sarah M.</div>
+          <div class="when">Richmond &middot; Example review</div>
+        </article>
+        <article class="review-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"We'd been let down by another builder before finding James. Straight answers, fair price, and the deck he built is better than we pictured."</blockquote>
+          <div class="who">Dave T.</div>
+          <div class="when">Stoke &middot; Example review</div>
+        </article>
+        <article class="review-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"From framing to final fix the workmanship was excellent. James kept us in the loop the whole way through our reno. Recommend without hesitation."</blockquote>
+          <div class="who">Priya K.</div>
+          <div class="when">Atawhai &middot; Example review</div>
+        </article>
+      </div>
+      <div class="reviews-cta reveal">
+        <a class="btn btn-navy" href="https://www.google.com/search?q=James+J+Builders+Ltd+Nelson+reviews" target="_blank" rel="noopener">
+          See all our Google reviews
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="review-banner">
+    <div class="wrap">
+      <div class="reveal">
+        <h2>Happy with our work?</h2>
+        <p>A quick Google review helps other Nelson homeowners find a builder they can rely on.</p>
+      </div>
+      <a class="btn btn-accent reveal" href="https://www.google.com/search?q=James+J+Builders+Ltd+Nelson+reviews" target="_blank" rel="noopener">Leave us a review</a>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Tell us about your project</h2>
+        <p class="lead">Ring or email James for a straight answer and a clear quote — new build, reno, deck or repair.</p>
+        <ul class="info-rows">
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><span class="lbl">Phone</span><a href="tel:+64224175468">022 417 5468</a></div>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <div><span class="lbl">Email</span><a href="#" data-gmail data-user="jamesjoo114" data-domain="gmail.com" data-su="Quote%20request%20%E2%80%94%20James%20J%20Builders" data-body="Hi%20James%2C%0A%0AI%27d%20like%20a%20quote%20for%3A%20">Email James</a></div>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><span class="lbl">Location</span>Nelson, New Zealand — serving Nelson &amp; Tasman</div>
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div><span class="lbl">Hours</span>Mon–Fri 7:30am – 5:00pm</div>
+          </li>
+        </ul>
+        <div class="socials">
+          <a href="https://www.facebook.com/p/James-J-Builders-Ltd-100022837253848/" target="_blank" rel="noopener" aria-label="James J Builders on Facebook">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/explore/search/keyword/?q=james%20j%20builders" target="_blank" rel="noopener" aria-label="Find James J Builders on Instagram">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/search?q=James%20J%20Builders%20Nelson" target="_blank" rel="noopener" aria-label="Find James J Builders on TikTok">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="contact-actions reveal">
+        <a class="btn btn-accent" href="tel:+64224175468">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call for a quote
+        </a>
+        <a class="btn btn-ghost" href="#" data-gmail data-user="jamesjoo114" data-domain="gmail.com" data-su="Quote%20request%20%E2%80%94%20James%20J%20Builders" data-body="Hi%20James%2C%0A%0AI%27d%20like%20a%20quote%20for%3A%20%0A%0AProperty%20location%3A%20%0A%0AThanks">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email us about your project
+        </a>
+        <span class="hint">We aim to reply to every enquiry within one working day.</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="map-band">
+    <div class="wrap">
+      <iframe title="Map — James J Builders Ltd, Nelson" src="https://www.google.com/maps?q=James%20J%20Builders%20Ltd%20Nelson%20New%20Zealand&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top">James J <em>Builders</em></a>
+      <ul class="foot-links">
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="https://www.google.com/search?q=James+J+Builders+Ltd+Nelson+reviews" target="_blank" rel="noopener">Google Reviews</a></li>
+      </ul>
+      <div class="socials">
+        <a href="https://www.facebook.com/p/James-J-Builders-Ltd-100022837253848/" target="_blank" rel="noopener" aria-label="James J Builders on Facebook">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/explore/search/keyword/?q=james%20j%20builders" target="_blank" rel="noopener" aria-label="Find James J Builders on Instagram">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/search?q=James%20J%20Builders%20Nelson" target="_blank" rel="noopener" aria-label="Find James J Builders on TikTok">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+      </div>
+      <div class="foot-copy">&copy; 2026 James J Builders Ltd &middot; Nelson, New Zealand. Demo website by Scaled Solutions.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // intro overlay
+  window.addEventListener('load',function(){
+    setTimeout(function(){document.getElementById('intro').classList.add('done');},900);
+  });
+  setTimeout(function(){document.getElementById('intro').classList.add('done');},2600);
+
+  // header scroll state
+  var header=document.getElementById('siteHeader');
+  var onScroll=function(){header.classList.toggle('scrolled',window.scrollY>40);};
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // mobile menu
+  var burger=document.getElementById('burger'), menu=document.getElementById('mobileMenu');
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    header.classList.add('scrolled');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+
+  // hero rotation (paused under reduced motion)
+  var slides=document.querySelectorAll('.hero-slide');
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && slides.length>1){
+    var i=0;
+    setInterval(function(){
+      slides[i].classList.remove('active');
+      i=(i+1)%slides.length;
+      slides[i].classList.add('active');
+    },6000);
+  }
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // Gmail compose buttons (email built in JS, never raw in HTML)
+  document.querySelectorAll('a[data-gmail]').forEach(function(a){
+    var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');
+    a.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+(a.getAttribute('data-su')||'')+'&body='+(a.getAttribute('data-body')||'');
+    a.target='_blank'; a.rel='noopener';
+  });
+})();
+</script>
+</body>
+</html>
